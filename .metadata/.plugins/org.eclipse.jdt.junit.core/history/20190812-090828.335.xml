@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StudentdalApplicationTests.testUpdateStudent" project="studentdal" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testUpdateStudent" classname="com.xuetaoshi.student.dal.StudentdalApplicationTests" time="0.103"/>
+</testrun>

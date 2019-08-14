@@ -1,0 +1,48 @@
+package com.xuetaoshi.customer.dal;
+
+import java.util.Optional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.xuetaoshi.customer.dal.entities.Customer;
+import com.xuetaoshi.customer.dal.repos.CustomerRepository;
+import com.xuetaoshi.student.dal.entities.Student;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class CustomerdalApplicationTests {
+	@Autowired
+	private CustomerRepository CustomerRepository;
+	
+	@Test
+	public void testCreateCustomer() {
+		Customer customer = new Customer();
+		customer.setName("Sam");
+		customer.setEmail("abc@gmail.com");
+		CustomerRepository.save(customer);
+	}
+	
+	@Test
+	public void testFindCustomerById() {
+		Customer customer = CustomerRepository.findById(1l).get();
+		System.out.println(customer);
+	}
+	
+	@Test
+	public void testUpdateCustomer() {
+		Customer customer = CustomerRepository.findById(1l).get();
+		customer.setEmail("cdefg@gmail.com");
+		CustomerRepository.save(customer);
+	}
+	@Test
+	public void testDeleteStudent() {
+		Customer customer = new Customer();
+		customer.setId(1l);
+		CustomerRepository.delete(customer);
+	}
+
+}

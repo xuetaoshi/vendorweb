@@ -1,0 +1,5 @@
+package com.xuetaoshi.customer.dal;
+
+public class Customer {
+
+}

@@ -1,0 +1,5 @@
+package com.xuetaoshi.student.dal.entities;
+
+public class Student {
+
+}
